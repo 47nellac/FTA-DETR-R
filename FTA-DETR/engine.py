@@ -20,7 +20,7 @@ import util.misc as utils
 from datasets.coco_eval import CocoEvaluator
 from datasets.panoptic_eval import PanopticEvaluator
 from datasets.data_prefetcher import data_prefetcher
-from torch.cuda.amp import autocast,GradScaler
+from torch.cuda.amp import GradScaler  # No longer importing autocast (doesn't seem to do anything but throw import errors)
 
 
 def train_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,

@@ -24,7 +24,7 @@ import datasets.samplers as samplers
 from datasets import build_dataset, get_coco_api_from_dataset
 from engine import evaluate, train_one_epoch
 from models import build_model
-from torch.cuda.amp import autocast as autocast, GradScaler
+from torch.cuda.amp import GradScaler # No longer importing autocast as autocast because its only function appears to be causing import errors
 
 
 def get_args_parser():
